@@ -43,9 +43,8 @@
 <nav class="bg-white shadow border-b border-slate-300">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 justify-between">
-			<div class="flex">
+			<div class="flex w-full">
 				<div class="-ml-2 mr-2 flex items-center md:hidden">
-					<!-- Mobile menu button -->
 					<button
 						type="button"
 						class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
@@ -55,11 +54,6 @@
 					>
 						<span class="absolute -inset-0.5" />
 						<span class="sr-only">Open main menu</span>
-						<!--
-                  Icon when menu is closed.
-    
-                  Menu open: "hidden", Menu closed: "block"
-                -->
 						<svg
 							class="{isMobileMenu ? 'hidden' : 'block'} h-6 w-6"
 							fill="none"
@@ -74,11 +68,6 @@
 								d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 							/>
 						</svg>
-						<!--
-                  Icon when menu is open.
-    
-                  Menu open: "block", Menu closed: "hidden"
-                -->
 						<svg
 							class="{isMobileMenu ? 'block' : 'hidden'} h-6 w-6"
 							fill="none"
@@ -94,7 +83,7 @@
 				<div class="flex flex-shrink-0 items-center">
 					<img class="h-8 w-auto" src={nav.img} alt="Your Company" />
 				</div>
-				<div class="hidden md:ml-6 md:flex md:space-x-8">
+				<div class="hidden md:mr-10 md:flex md:space-x-8 w-full justify-end">
 					{#each nav.listnavs as item}
 						<a
 							href={item.link}
