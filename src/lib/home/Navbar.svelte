@@ -2,9 +2,10 @@
 	import { User } from 'lucide-svelte';
 	import { page } from '$app/stores';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import Logo from '$lib/photos/logo.png';
 	let nav = {
 		title: 'Svelte Tailwinds',
-		img: 'https://cdn-icons-png.flaticon.com/512/5769/5769490.png',
+		img: Logo,
 		listnavs: [
 			{
 				name: 'Home',
@@ -40,7 +41,7 @@
 	export let email = '';
 </script>
 
-<nav class="bg-white shadow border-b border-slate-300">
+<nav class="bg-white shadow border-b border-slate-300 sticky top-0 z-50">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 justify-between">
 			<div class="flex w-full">

@@ -1,45 +1,40 @@
 <script>
 	import Button from '$lib/components/ui/button/button.svelte';
-	import { Layout, User } from 'lucide-svelte';
-
-	let herosec = {
-		title: 'Simple SvelteKit Auth',
-		subtitle: 'Lucia - Shadcn - Drizzle ORM',
-		subtext: 'Hello People, This is a simple SvelteKit Auth Template',
-		btn1: 'Dashboard',
-		btn2: 'Log In'
+	import BgImg from '$lib/photos/testimonial/bg.png';
+	let hero = {
+		img: BgImg,
+		title: 'Live Today, <br/> Build Your Style',
+		subtext: 'Live in your own way, and make your own style.',
+		btn1: 'Download',
+		btn2: 'Write Your Today'
 	};
 </script>
 
-<section class="bg-gray-50">
-	<div class="mx-auto max-w-screen-xl px-4 py-20 lg:flex lg:h-[90vh] lg:items-center">
-		<div class="mx-auto max-w-3xl text-center">
-			<h1 class="text-3xl font-extrabold sm:text-5xl">
-				{herosec.title}
-				<strong class="font-extrabold text-blue-600 sm:block md:my-4">
-					{herosec.subtitle}
-				</strong>
-			</h1>
-
-			<p class="mt-4 sm:text-xl/relaxed text-gray-600 font-light">
-				{herosec.subtext}
-			</p>
-
-			<div class="mt-8 flex flex-wrap justify-center gap-4">
-				<Button size="lg" class="lg:px-16" href="/dashboard">
-					<Layout size="19" strokeWidth="1.8" class="mr-2" />
-					{herosec.btn1}</Button
+<div class="bg-gray-900 relative">
+	<div class="relative h-[480px] isolate">
+		<img
+			src={hero.img}
+			alt="Background"
+			class="absolute inset-0 -z-10 h-full w-full object-cover opacity-90 sm:opacity-80 md:contrast-125"
+		/>
+		<div class="mx-auto md:mx-32 max-w-lg py-20 sm:py-10 lg:pt-44">
+			<div
+				class="text-center md:text-left md:border-white md:border md:p-4  md:bg-gray-800/30 py-10 md:backdrop-blur-sm rounded-lg shadow-xl"
+			>
+				<h1
+					class="text-4xl font-bold tracking-tight text-white drop-shadow-lg shadow-gray-600 sm:text-6xl"
 				>
-				<Button
-					href="/login"
-					size="lg"
-					class="lg:px-16 border-slate-700 hover:bg-primary hover:text-primary-foreground"
-					variant="outline"
+					{@html hero.title}
+				</h1>
+				<p class="mt-3 text-lg leading-8 text-gray-200">
+					{hero.subtext}
+				</p>
+				<div
+					class="mt-3 flex items-center justify-center md:justify-start md:gap-x-6 flex-wrap gap-3"
 				>
-					<User size="19" strokeWidth="1.8" class="mr-2" />
-					{herosec.btn2}</Button
-				>
+					<Button size="lg" variant="outline" class="bg-transparent text-white">Buy Now</Button>
+				</div>
 			</div>
 		</div>
 	</div>
-</section>
+</div>
