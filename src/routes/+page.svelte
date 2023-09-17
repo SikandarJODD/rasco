@@ -5,7 +5,7 @@
 </script>
 
 <Hero />
-<div class="md:px-28 bg-white md:bg-[#e5fdfe] border-b border-slate-800">
+<div class="md:px-28 bg-white md:bg-[#e5fdfe] border-b border-slate-800 flex justify-center">
 	<Features />
 </div>
 <FeaturesProducts />

@@ -2,6 +2,7 @@
 	import Jeans from '$lib/photos/jeans/the flame warrior/hades1.png';
 	import Jackets from '$lib/photos/jeans/madusa/jacket.jpeg';
 	import Accessories from '$lib/photos/jeans/warrier skull/accessoriess.jpeg';
+	import { productsInfo } from '$lib';
 	let productStuff = [
 		{
 			name: 'Flame Warrior',
@@ -49,7 +50,7 @@
 		<!-- text - end -->
 
 		<div class="grid gap-x-4 gap-y-8 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
-			{#each productStuff as item, index}
+			{#each $productsInfo as item, index}
 				<div class="group">
 					<div
 						class="px-3 py-3 border border-slate-400 rounded-xl hover:border-slate-900 transition-all duration-300 group-hover:shadow-xl shadow-gray-400"

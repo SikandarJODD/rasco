@@ -5,6 +5,9 @@ import j1 from '$lib/photos/jeans/the flame warrior/hades1.png';
 import j2 from '$lib/photos/jeans/the flame warrior/img1.png';
 import j3 from '$lib/photos/jeans/the flame warrior/img2.jpeg';
 import j4 from '$lib/photos/jeans/the flame warrior/img3.jpeg';
+import c1 from '$lib/photos/jeans/Chromatic Skull/img1.jpeg'
+import c2 from '$lib/photos/jeans/Chromatic Skull/img2.jpeg'
+import c3 from '$lib/photos/jeans/Chromatic Skull/img3.jpeg'
 import Jackets from '$lib/photos/jeans/madusa/jacket.jpeg';
 import Accessories from '$lib/photos/jeans/warrier skull/accessoriess.jpeg';
 export let productsInfo = writable([
@@ -57,19 +60,17 @@ export let productsInfo = writable([
         ],
     },
     {
-        name: 'Madusa',
+        name: 'Chromatic Skull',
         title: 'Jackets',
-        img: Jackets,
+        img: c2,
         align: 'object-top',
         price: '4500',
         brandName: 'RAS',
-        productName: 'Madusa',
+        productName: 'Chromatic Skull',
         rating: 4.2,
         ratingCount: 56,
         priceOld: 7000,
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
-        imgs: [
-            j1, j2, j3, j4
-        ],
+        imgs: [c1, c2, c3, c2],
     }
 ]);

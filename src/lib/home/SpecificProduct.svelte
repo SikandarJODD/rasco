@@ -6,12 +6,12 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	export let pdata = $productsInfo[productNo];
 
-	let select_img = 3;
+	let select_img = 0;
 	let selectSize = 2;
 
 	let code = setInterval(() => {
 		select_img++;
-		if (select_img > pdata.imgs.length - 1) {
+		if (select_img > $productsInfo[productNo].imgs.length - 1) {
 			select_img = 0;
 		}
 	}, 3000);
@@ -39,7 +39,7 @@
 							<img
 								src={item}
 								alt="Product"
-								class="h-full w-full object-cover object-center rounded-lg"
+								class="h-28 md:h-[131px] w-full object-cover object-center rounded-lg"
 							/>
 						</div>
 					{/each}
@@ -51,7 +51,7 @@
 							in:scale
 							src={pdata.imgs[select_img]}
 							alt="Product"
-							class="h-full w-full object-cover object-center"
+							class="h-80 md:h-full w-full object-cover object-center"
 						/>
 					{/key}
 

@@ -2,6 +2,7 @@
 	import Jeans from '$lib/photos/jeans/the flame warrior/hades1.png';
 	import Jackets from '$lib/photos/jeans/madusa/jacket.jpeg';
 	import Accessories from '$lib/photos/jeans/warrier skull/accessoriess.jpeg';
+	import { productsInfo } from '$lib';
 	let productStuff = [
 		{
 			title: 'Jeans',
@@ -11,17 +12,17 @@
 		{
 			title: 'Jackets',
 			img: Jackets,
-			align: 'object-top'
-		},
-		{
-			title: 'Accessories',
-			img: Accessories,
-			align: 'object-top'
+			align: 'object-center'
 		}
+		// {
+		// 	title: 'Accessories',
+		// 	img: Accessories,
+		// 	align: 'object-top'
+		// }
 	];
 </script>
 
-<div class=" py-6 sm:py-8 lg:py-12 ">
+<div class=" py-6 sm:py-8 lg:py-12 md:w-[80%]">
 	<div class="mx-auto max-w-screen-2xl px-4 md:px-8">
 		<!-- text - start -->
 		<div class="mb-6 md:mb-12">
@@ -32,7 +33,7 @@
 		</div>
 		<!-- text - end -->
 
-		<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+		<div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:gap-6 xl:gap-8">
 			<!-- image - start -->
 			{#each productStuff as item}
 				<a
