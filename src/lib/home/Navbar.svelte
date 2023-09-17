@@ -44,7 +44,7 @@
 <nav class="bg-white shadow border-b border-slate-300 sticky top-0 z-50">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 justify-between">
-			<div class="flex w-full">
+			<div class="flex w-[80%] md:w-full ">
 				<div class="-ml-2 mr-2 flex items-center md:hidden">
 					<button
 						type="button"
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			<div class="flex items-center">
-				<div class="flex-shrink-0">
+				<div class="flex-shrink-0 ">
 					{#if email.length > 0}
 						<!-- if user is logged in -->
 						<form method="POST">

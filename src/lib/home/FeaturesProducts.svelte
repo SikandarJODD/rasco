@@ -42,20 +42,20 @@
 				fashionable Products
 			</h2>
 
-			<p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg font-mono">
+			<p class="mx-auto max-w-screen-md text-center text-gray-700 md:text-lg font-mono">
 				We provide you with the best quality products at the best prices.
 			</p>
 		</div>
 		<!-- text - end -->
 
 		<div class="grid gap-x-4 gap-y-8 sm:grid-cols-2 md:gap-x-6 lg:grid-cols-3 xl:grid-cols-4">
-			{#each productStuff as item}
+			{#each productStuff as item, index}
 				<div class="group">
 					<div
-						class="px-3 py-3 border border-slate-400 rounded-xl hover:border-slate-900 transition-all duration-300"
+						class="px-3 py-3 border border-slate-400 rounded-xl hover:border-slate-900 transition-all duration-300 group-hover:shadow-xl shadow-gray-400"
 					>
 						<a
-							href="#"
+							href="products/{index}"
 							class="group relative mb-2 block h-96 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
 						>
 							<img
@@ -77,7 +77,9 @@
 							</div>
 
 							<div class="flex flex-col items-end">
-								<span class="font-bold text-gray-600 group-hover:text-blue-600 lg:text-lg">₹{item.price}.00</span>
+								<span class="font-bold text-gray-600 group-hover:text-blue-600 lg:text-lg"
+									>₹{item.price}.00</span
+								>
 							</div>
 						</div>
 					</div>
